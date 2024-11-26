@@ -1,12 +1,7 @@
----
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
-
-const { href, title, body } = Astro.props;
----
+<script>
+export let href, title, body;
+console.log(href, title, body);
+</script>
 
 <li class="link-card">
 	<a href={href}>
