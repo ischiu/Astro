@@ -8,6 +8,7 @@
 			<h2 class="m-0 text-xl transition-colors duration-600 hover:text-tertiary">
 				{title}
 				<span>&rarr;</span>
+				<span>
 			</h2>
 			<p class="mt-2 mb-0">
 				{body}
