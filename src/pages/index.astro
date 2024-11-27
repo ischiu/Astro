@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.svelte';
+import { TEST1 } from 'astro:env/client';
+import { getSecret } from 'astro:env/server';
+
+const S1 = TEST1;
+const S2 = "" + getSecret("TEST2");
 ---
 
 <Layout title="Welcome to Astro.">
@@ -34,6 +39,8 @@ import Card from '../components/Card.svelte';
 			</defs>
 		</svg>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h2>{S1}</h2>
+		<h2>{S2}</h2>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.

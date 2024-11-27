@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig,envField } from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
 
@@ -11,5 +11,19 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
-  integrations: [svelte(), tailwind()]
+  integrations: [svelte(), tailwind()],
+  experimental: {
+    env: {
+      schema: {
+        TEST1: envField.string({
+          context: 'client',
+          access: 'public',
+        }),
+        TEST2: envField.string({
+          context: 'server',
+          access: 'secret',
+        })
+      }
+    }
+  }
 });
