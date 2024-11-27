@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import Hola from "../components/hola.svelte";
+import Contador from "../components/contador.svelte";
 ---
 
 <!doctype html>
@@ -18,7 +19,7 @@ import Hola from "../components/hola.svelte";
 		<title>{title}</title>
 	</head>
 	<body>
-		<Hola client:load />
+		<Contador client:load />
 		<slot />
 	</body>
 </html>

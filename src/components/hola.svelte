@@ -44,11 +44,7 @@ function createFirework() {
         '255,255,50',   // Amarillo suave 
         '255,50,255'    // Magenta suave 
     ];
-
-    // Generate x coordinate randomly across the entire canvas width
     const x = Math.random() * canvas.width; 
-    
-    // Generate y coordinate randomly in the upper 2/3 of the canvas
     const y = Math.random() * (canvas.height * 2/3);
 
     const color = colors[Math.floor(Math.random() * colors.length)];
